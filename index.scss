@@ -1,9 +1,5 @@
 $Quest-image-path: "Quest";
 
-body {
-  margin: 0;
-}
-
 @mixin reset-list {
   margin: 0;
   padding: 0;
@@ -23,7 +19,12 @@ body {
   }
 }
 
-.inner-box{
+// 전역 css
+body {
+  margin: 0;
+}
+
+.inner-box {
   position: relative;
 }
 
@@ -32,6 +33,21 @@ body {
   left: 10px;
   bottom: 15px;
 }
+
+.horizontal {
+  @include horizontal-list;
+  li{
+    margin: 0 5px;
+  }
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #535353;
+}
+
+// header css
 
 header {
   width: 100%;
@@ -42,10 +58,6 @@ header {
 
     margin: 0 auto;
     position: relative;
-  }
-
-  ul.horizontal {
-    @include horizontal-list;
   }
 
   #navigation {
@@ -144,7 +156,21 @@ footer {
     height: 100px;
   }
 
-  #menu{
-    @include horizontal-list
+  .logo-text {
+    margin: 0;
+  }
+
+  #menu {
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+
+    li{
+      margin: 0;
+    }
+
+    li:not(:last-child):after {
+      content: " | ";
+    }
   }
 }
