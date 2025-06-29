@@ -5,5 +5,18 @@ header {
 }
 
 section {
+  position: relative;
   width: 1000px;
+}
+section article {
+  float: left;
+  margin: 5px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+section article.right {
+  margin-right: 0;
+}
+section article.left {
+  margin-left: 0;
 }/*# sourceMappingURL=gallery.css.map */
