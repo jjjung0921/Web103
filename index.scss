@@ -1,5 +1,9 @@
 $Quest-image-path: "Quest";
 
+body {
+  margin: 0;
+}
+
 @mixin reset-list {
   margin: 0;
   padding: 0;
@@ -19,21 +23,25 @@ $Quest-image-path: "Quest";
   }
 }
 
+.inner-box{
+  position: relative;
+}
+
+.logo-text {
+  position: absolute;
+  left: 10px;
+  bottom: 15px;
+}
+
 header {
   width: 100%;
 
-  #inner-box {
+  .inner-box {
     width: 1180px;
     height: 120px;
 
     margin: 0 auto;
     position: relative;
-  }
-
-  #logo-text {
-    position: absolute;
-    left: 10px;
-    bottom: 15px;
   }
 
   ul.horizontal {
@@ -71,7 +79,7 @@ main {
     font-size: 25px;
     color: white;
 
-    #inner-box {
+    .inner-box {
       position: absolute;
       top: 150px;
       left: 0;
@@ -86,41 +94,57 @@ main {
   }
 }
 
-section{
+section {
   width: 1180px;
   height: 450px;
 
   margin: 0 auto;
 
-  #news-title{
+  #news-title {
     width: fit-content;
     margin: 50px auto;
   }
 
-  #news{
+  #news {
     width: 100%;
   }
 
-  article{
+  article {
     width: 230px;
     float: left;
 
-    &:first-child{
+    &:first-child {
       margin-left: 0px;
     }
 
-    &:last-child{
+    &:last-child {
       margin-right: 0px;
     }
 
-    margin: 0px (1180px - 230px*4)/6;
+    margin: 0px (1180px - 230px * 4)/6;
   }
 
-  .article-title{
+  .article-title {
     font-weight: bold;
   }
 
-  .article-content{
+  .article-content {
+    margin-top: 10px;
     font-weight: 500;
+    line-height: 1.2;
+  }
+}
+
+footer {
+  width: 100%;
+
+  .inner-box {
+    margin: 0 auto;
+    width: 1000px;
+    height: 100px;
+  }
+
+  #menu{
+    @include horizontal-list
   }
 }
