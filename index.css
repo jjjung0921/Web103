@@ -36,6 +36,7 @@ a:hover {
 
 header {
   width: 100%;
+  padding: 10px 0;
 }
 header .inner-box {
   width: 1180px;
