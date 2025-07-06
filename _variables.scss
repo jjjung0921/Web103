@@ -1,0 +1,5 @@
+$header-inner-height: 120px;
+$header-vertical-padding: 10px;
+$header-border-width: 1px;
+
+$header-total-height: $header-inner-height + ($header-vertical-padding * 2) + $header-border-width;

@@ -1,5 +1,7 @@
 $Quest-image-path: "Quest";
 
+@import "_variables";
+
 @mixin reset-list {
   margin: 0;
   padding: 0;
@@ -51,11 +53,11 @@ a:hover {
 
 header {
   width: 100%;
-  padding: 10px 0;
+  padding: $header-vertical-padding 0;
 
   .inner-box {
     width: 1180px;
-    height: 120px;
+    height: $header-inner-height;
 
     margin: 0 auto;
     position: relative;

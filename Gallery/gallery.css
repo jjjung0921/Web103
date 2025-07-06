@@ -2,11 +2,15 @@ header {
   border-bottom: 1px solid black;
   position: fixed;
   top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 100;
 }
 
 section {
   position: relative;
   width: 1000px;
+  margin-top: 141px;
 }
 section article {
   float: left;

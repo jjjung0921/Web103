@@ -1,15 +1,21 @@
 $Quest-image-path: "/Quest";
 
+@import "../_variables";
+
 // header css
 header {
-  border-bottom: 1px solid black;
+  border-bottom: $header-border-width solid black;
   position: fixed;
   top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 100;
 }
 
 section {
   position: relative;
   width: 1000px;
+  margin-top: $header-total-height;
 
   article {
     float: left;
