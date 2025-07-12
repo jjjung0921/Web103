@@ -7,20 +7,105 @@ header {
   z-index: 100;
 }
 
-section {
+#gallery-content {
   position: relative;
   width: 1000px;
-  margin-top: 141px;
+  margin: 141px auto 0 auto;
 }
-section article {
+#gallery-content article {
+  position: relative;
   float: left;
   margin: 5px;
-  width: -moz-fit-content;
-  width: fit-content;
 }
-section article.right {
-  margin-right: 0;
+#gallery-content article img {
+  float: left;
 }
-section article.left {
-  margin-left: 0;
+#gallery-content article .caption {
+  position: absolute;
+  font-weight: bold;
+  color: white;
+}
+#gallery-content article.left {
+  margin: 5px 5px 5px 0;
+}
+#gallery-content article.right {
+  margin: 5px 0 5px 5px;
+}
+#gallery-content article:nth-child(1) {
+  background-image: url("/Quest/Gallery(1).png");
+  width: 700px;
+  height: 400px;
+}
+#gallery-content article:nth-child(2) {
+  background-image: url("/Quest/Gallery(2).png");
+  width: 290px;
+  height: 190px;
+}
+#gallery-content article:nth-child(3) {
+  background-image: url("/Quest/Gallery(3).png");
+  width: 290px;
+  height: 95px;
+}
+#gallery-content article:nth-child(4) {
+  background-image: url("/Quest/Gallery(4).png");
+  width: 290px;
+  height: 95px;
+}
+#gallery-content article:nth-child(5) {
+  width: 490px;
+}
+#gallery-content article:nth-child(5) img:first-child {
+  margin-bottom: 10px;
+}
+#gallery-content article:nth-child(6) {
+  background-image: url("/Quest/Gallery(6).png");
+  width: 500px;
+  height: 490px;
+}
+#gallery-content article:nth-child(7) {
+  background-image: url("/Quest/Gallery(7).png");
+  width: 1000px;
+  height: 361px;
+}
+#gallery-content article:nth-child(8) {
+  background-image: url("/Quest/Gallery(8).png");
+  width: 1000px;
+  height: 371px;
+}
+#gallery-content #first-cap {
+  right: 10px;
+  bottom: 10px;
+  font-size: 30px;
+}
+#gallery-content #second-cap {
+  top: 50px;
+  left: 10px;
+}
+#gallery-content #third-cap {
+  right: 10px;
+  bottom: 20px;
+}
+#gallery-content #fourth-cap {
+  right: 20px;
+  bottom: 30px;
+  font-size: 30px;
+  color: gold;
+}
+#gallery-content #fifth-cap {
+  font-size: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+#gallery-content #sixth-cap {
+  width: 450px;
+  height: 150px;
+  right: 30px;
+  bottom: 40px;
+  font-size: 20px;
+}
+#gallery-content #sixth-cap .emphasize {
+  display: inline-block;
+  font-size: 30px;
 }/*# sourceMappingURL=gallery.css.map */

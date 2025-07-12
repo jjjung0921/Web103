@@ -12,23 +12,115 @@ header {
   z-index: 100;
 }
 
-section {
+#gallery-content {
   position: relative;
   width: 1000px;
-  margin-top: $header-total-height;
+  margin: $header-total-height auto 0 auto;
 
   article {
+    position: relative;
     float: left;
-
     margin: 5px;
-    width: fit-content;
+    img {
+      float: left;
+    }
+    .caption {
+      position: absolute;
+      font-weight: bold;
+      color: white;
+    }
+
+    &.left {
+      margin: 5px 5px 5px 0;
+    }
+
+    &.right {
+      margin: 5px 0 5px 5px;
+    }
+
+    &:nth-child(1) {
+      background-image: url("#{$Quest-image-path}/Gallery(1).png");
+      width: 700px;
+      height: 400px;
+    }
+    &:nth-child(2) {
+      background-image: url("#{$Quest-image-path}/Gallery(2).png");
+      width: 290px;
+      height: 190px;
+    }
+    &:nth-child(3) {
+      background-image: url("#{$Quest-image-path}/Gallery(3).png");
+      width: 290px;
+      height: 95px;
+    }
+    &:nth-child(4) {
+      background-image: url("#{$Quest-image-path}/Gallery(4).png");
+      width: 290px;
+      height: 95px;
+    }
+    &:nth-child(5) {
+      width: 490px;
+      img:first-child {
+        margin-bottom: 10px;
+      }
+    }
+    &:nth-child(6) {
+      background-image: url("#{$Quest-image-path}/Gallery(6).png");
+      width: 500px;
+      height: 490px;
+    }
+    &:nth-child(7) {
+      background-image: url("#{$Quest-image-path}/Gallery(7).png");
+      width: 1000px;
+      height: 361px;
+    }
+    &:nth-child(8) {
+      background-image: url("#{$Quest-image-path}/Gallery(8).png");
+      width: 1000px;
+      height: 371px;
+    }
   }
 
-  article.right {
-    margin-right: 0;
+  #first-cap {
+    right: 10px;
+    bottom: 10px;
+    font-size: 30px;
   }
 
-  article.left {
-    margin-left: 0;
+  #second-cap {
+    top: 50px;
+    left: 10px;
+  }
+
+  #third-cap {
+    right: 10px;
+    bottom: 20px;
+  }
+
+  #fourth-cap {
+    right: 20px;
+    bottom: 30px;
+    font-size: 30px;
+    color: gold;
+  }
+
+  #fifth-cap {
+    font-size: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+
+  #sixth-cap {
+    width: 450px;
+    height: 150px;
+    right: 30px;
+    bottom: 40px;
+    font-size: 20px;
+    .emphasize {
+      display: inline-block;
+      font-size: 30px;
+    }
   }
 }

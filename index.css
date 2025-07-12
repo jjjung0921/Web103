@@ -82,34 +82,34 @@ main #image #title {
   font-weight: bold;
 }
 
-section {
+#index-content {
   width: 1180px;
   height: 450px;
   margin: 0 auto;
 }
-section #news-title {
+#index-content #news-title {
   width: -moz-fit-content;
   width: fit-content;
   margin: 50px auto;
 }
-section #news {
+#index-content #news {
   width: 100%;
 }
-section article {
+#index-content article {
   width: 230px;
   float: left;
   margin: 0px 43.3333333333px;
 }
-section article:first-child {
+#index-content article:first-child {
   margin-left: 0px;
 }
-section article:last-child {
+#index-content article:last-child {
   margin-right: 0px;
 }
-section .article-title {
+#index-content .article-title {
   font-weight: bold;
 }
-section .article-content {
+#index-content .article-content {
   margin-top: 10px;
   font-weight: 500;
   line-height: 1.2;
