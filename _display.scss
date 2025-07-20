@@ -7,7 +7,7 @@
   height: #{$height};
 }
 
-@mixin display-background($path, $width:null, $height:null) {
+@mixin display-background($width:null, $height:null, $path) {
   @include meta.apply(meta.get-mixin("display-size"), $width, $height);
   background-image: url("#{$path}");
   background-size: cover;

@@ -53,7 +53,7 @@ header {
 }
 
 main {
-  @include display.display-background("Quest/bg_main.png", 100%, 590px);
+  @include display.display-background( 100%, 590px, "Quest/bg_main.png");
   position: relative;
 
   .inner-box {
