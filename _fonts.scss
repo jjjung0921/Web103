@@ -1,0 +1,11 @@
+@use "sass:map";
+$font-weight: ("regular": 400, "medium": 500, "bold": 700);
+
+@mixin basic-font-style($color:black, $size, $weight: null){
+    color: #{$color};
+    font-size: #{$size};
+
+    @if $weight != null {
+        font-weight: map-get($font-weight, #{$weight});   
+    } 
+}

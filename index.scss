@@ -1,25 +1,8 @@
 $Quest-image-path: "Quest";
 
-@import "_variables";
-
-@mixin reset-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-@mixin horizontal-list {
-  @include reset-list;
-
-  li {
-    display: inline-block;
-  }
-
-  a {
-    color: black;
-    text-decoration: none;
-  }
-}
+@use "variables";
+@use "fonts";
+@use "display";
 
 // 전역 css
 body {
@@ -30,17 +13,8 @@ body {
   position: relative;
 }
 
-.logo-text {
-  position: absolute;
-  left: 10px;
-  bottom: 15px;
-}
-
 .horizontal {
-  @include horizontal-list;
-  li{
-    margin: 0 5px;
-  }
+  @include display.horizontal-list;
 }
 
 a:hover {
@@ -53,67 +27,50 @@ a:hover {
 
 header {
   width: 100%;
-  padding: $header-vertical-padding 0;
 
   .inner-box {
-    width: 1180px;
-    height: $header-inner-height;
+    @include display.div-horizontal-center(1180px, 120px, 10px);
 
-    margin: 0 auto;
-    position: relative;
+    .logo-text {
+      @include display.position-setting(left, 10px, bottom, 15px);
+      margin: 0;
+    }
   }
 
   #navigation {
     font-weight: bold;
 
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
+    @include display.position-setting(right, 0px, bottom, 0px);
+
+    li {
+      @include display.child-space-between(20px);
+    }
   }
 
   #utility {
-    position: absolute;
-    right: 30px;
-    top: 20px;
+    @include display.position-setting(right, 30px, top, 20px);
   }
 }
 
 main {
-  width: 100%;
-  height: 590px;
-  background-image: url("#{$Quest-image-path}/bg_main.png");
+  @include display.display-background("Quest/bg_main.png", 100%, 590px);
+  position: relative;
 
-  #image {
-    position: relative;
+  .inner-box {
+    @include fonts.basic-font-style(white, 25px);
 
-    width: 800px;
-    height: 300px;
+    @include display.div-horizontal-center(800px, 300px);
+    @include display.position-setting(top, 150px, left, 0, right, 0);
+  }
 
-    margin: 0 auto;
-
-    font-size: 25px;
-    color: white;
-
-    .inner-box {
-      position: absolute;
-      top: 150px;
-      left: 0;
-      right: 0;
-    }
-
-    #title {
-      width: fit-content;
-      font-size: 80px;
-      font-weight: bold;
-    }
+  #title {
+    width: fit-content;
+    @include fonts.basic-font-style(white, 80px, bold);
   }
 }
 
-#index-content{
-  width: 1180px;
-  height: 450px;
-
-  margin: 0 auto;
+#index-content {
+  @include display.div-horizontal-center(1180px, 450px);
 
   #news-title {
     width: fit-content;
@@ -121,22 +78,17 @@ main {
   }
 
   #news {
-    width: 100%;
-  }
+    $gap-size: (1180px - 230px * 4)/12;
+    @include display.clearfix;
 
-  article {
-    width: 230px;
-    float: left;
+    padding: 0 $gap-size * 3;
 
-    &:first-child {
-      margin-left: 0px;
+    article {
+      width: 230px;
+      float: left;
+
+      @include display.child-space-between($gap-size);
     }
-
-    &:last-child {
-      margin-right: 0px;
-    }
-
-    margin: 0px (1180px - 230px * 4)/6;
   }
 
   .article-title {
@@ -155,13 +107,12 @@ footer {
   background-color: #000e1d;
 
   .inner-box {
-    margin: 0 auto;
-    width: 1000px;
-    height: 100px;
+    @include display.div-horizontal-center(1000px, 100px);
+    padding: 10px;
 
     color: #696969;
 
-    a{
+    a {
       color: #696969;
     }
   }
@@ -171,13 +122,7 @@ footer {
   }
 
   #menu {
-    position: absolute;
-    right: 20px;
-    bottom: 15px;
-
-    li{
-      margin: 0;
-    }
+    @include display.position-setting(right, 20px, bottom, 15px);
 
     li:not(:last-child):after {
       content: " | ";
